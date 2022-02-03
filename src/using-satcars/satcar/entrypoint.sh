@@ -1,4 +1,4 @@
-#!/usr/bin/env ash
+#!/usr/bin/env bash
 REQUIRED_ENV_VARS='APP_ID APP_HOST APP_PORT'
 
 retryNginx() {
@@ -30,7 +30,7 @@ checkEnvVar () {
 }
 
 # Turn on job management
-set -m
+#set -m
 
 # Read all env variable from the contain${APP_PORT}er. Used in SSH sessions
 eval $(printenv | sed -n "s/^\([^=]\+\)=\(.*\)$/export \1=\2/p" | sed 's/"/\\\"/g' | sed '/=/s//="/' | sed 's/$/"/' >> /etc/profile)
