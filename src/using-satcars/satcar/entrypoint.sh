@@ -1,5 +1,4 @@
 #!/bin/sh
-REQUIRED_ENV_VARS='APP_ID APP_HOST APP_PORT'
 
 retryNginx() {
     nginx
@@ -59,7 +58,7 @@ su-exec appuser /app/daprd \
 --dapr-internal-grpc-port "5555" \
 --components-path "/components" \
 --log-level debug \
---app-id ${APP_ID:-pythonapp} \
+--app-id ${APP_ID} \
 --app-port "${APP_PORT:-80}" \
 ${OPTIONAL_ARGS}
 
