@@ -53,14 +53,14 @@ else
 fi
 
 su-exec appuser /app/daprd \
--config /config/config.yaml \
--dapr-http-port "443"
---app-ssl true
--dapr-internal-grpc-port "5555" \
--components-path "/components" \
--log-level debug \
--app-id ${APP_ID:-pythonapp} \
--app-port "${APP_PORT:-80}" \
+--config /config/config.yaml \
+--dapr-http-port "443"
+---app-ssl true
+--dapr-internal-grpc-port "5555" \
+--components-path "/components" \
+--log-level debug \
+--app-id ${APP_ID:-pythonapp} \
+--app-port "${APP_PORT:-80}" \
 ${OPTIONAL_ARGS}
 
 #/app/daprd -dapr-internal-grpc-port "5555" -log-level debug -app-id ${APP_ID:-pythonapp} -app-port "${APP_PORT:-80}" -placement-host-address "${PLACEMENT_HOST:-localhost}":"${PLACEMENT_PORT:-50006}"
