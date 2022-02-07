@@ -54,8 +54,8 @@ fi
 
 su-exec appuser /app/daprd \
 --config /config/config.yaml \
---dapr-http-port "443"
---app-ssl true
+--dapr-http-port "443" \
+--app-ssl true \
 --dapr-internal-grpc-port "5555" \
 --components-path "/components" \
 --log-level debug \
