@@ -53,7 +53,7 @@ fi
 
 su-exec appuser /app/daprd \
 --app-id ${APP_ID} \
---config /config/config.yaml \
+--config /configuration/config.yaml \
 --dapr-http-port "443" \
 --app-ssl true \
 --dapr-internal-grpc-port "5555" \
