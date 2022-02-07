@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 REQUIRED_ENV_VARS='APP_ID APP_HOST APP_PORT'
 
 retryNginx() {
