@@ -29,5 +29,5 @@ COPY --chmod=500 --chown=root:root entrypoint.sh /app/
 RUN apk add --no-cache gettext nginx su-exec &&\
     adduser -HD -s /bin/ash appuser
 COPY --from=dapr-downloader --chmod=0500 --chown=appuser:appuser /app/daprd .
-ENTRYPOINT [ "/app/entrypoint.sh" ]
+ENTRYPOINT [ "sh", "/app/entrypoint.sh" ]
 
