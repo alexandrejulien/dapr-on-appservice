@@ -53,11 +53,11 @@ fi
 
 su-exec appuser /app/daprd \
 --app-id ${APP_ID} \
---config /configuration/config.yaml \
+--config /dapr/configuration/config.yaml \
 --dapr-http-port "443" \
 --app-ssl true \
 --dapr-internal-grpc-port "5555" \
---components-path "/components" \
+--components-path "/dapr/components" \
 --log-level debug \
 --app-port "${APP_PORT:-80}" 
 
